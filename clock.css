@@ -1,0 +1,85 @@
+     *{
+        margin:0;
+        padding:0;
+        
+     }
+     .first{
+        width:100%;
+        height:100vh;
+        background:linear-gradient(45deg , pink ,white);
+        position: relative;
+}
+.second{
+   width:800px;
+   height:180px;
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%, -50%);
+   background:rgb(155, 155, 240);
+}
+.third{
+   width:100%;
+   height:100%;
+   border-radius:10px;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   backdrop-filter: blur(30px);
+   background-color: rgba(255, 255, 255, 0.5); 
+}
+.second::before{
+   content: '';
+   width:160px;
+   height:160px;
+   background:blanchedalmond;
+   border-radius: 5px;
+   position:absolute;
+   left:-50px;
+   top:-50px;
+   z-index:-1;
+}
+.second::after{
+   content: '';
+   width:160px;
+   height:160px;
+   background:blanchedalmond;
+   border-radius: 50%;
+   position:absolute;
+   right:-30px;
+   bottom:-50px;
+   z-index:-1;
+}
+.second span{
+   font-size:80px;
+   width:110px;
+   display: inline-block;
+   text-align:center;
+   position:relative;
+}
+.second span::after{
+   
+   font-size: 16px;
+   position:absolute;
+   bottom:-5px;
+   left: 50%;
+   transform:translate(-50%);
+}
+#hrs::after{
+   content:'Hours';
+}
+#min::after{
+   content:'Minutes';
+}
+#sec::after{
+   content:'Seconds';
+}
+#date::after{
+   content:'Date';
+}
+#day::after{
+   content:'Day';
+}
+#year::after{
+   content:'Year';
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="date.css">
+    <title>Your day</title>
+</head>
+<body>
+    <div class="first">
+        <div class="second">
+            <div class="third">
+                <span id="date">00</span>
+                <span>-</span>
+                <span id = "day">00</span>
+                <span>-</span>
+                <span id = "year">00</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        let date=document.getElementById("date");
+        let day = document.getElementById("day");
+        let year = document.getElementById("year");
+
+        setInterval(()=>{
+            let currentdate = new Date();
+            date.innerHTML = currentdate.getDate();
+            day.innerHTML = currentdate.getDay();
+            year.innerHTML = currentdate.getFullYear();
+        },1000)
+    </script>
+</body>
+</html>
